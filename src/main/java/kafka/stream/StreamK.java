@@ -26,8 +26,8 @@ import org.apache.kafka.streams.state.WindowStore;
 
 public class StreamK {
 
-	Map<Integer, String> map = new HashMap<>();
-	int key = 0;
+	private Map<Integer, String> map = new HashMap<>();
+	private int key = 0;
 
 	private Properties configInputProps(String bootstrapServer) {
 
@@ -44,7 +44,7 @@ public class StreamK {
 		streamsConfiguration.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, 
 				Serdes.String().getClass().getName());
 
-		streamsConfiguration.put(StreamsConfig.STATE_DIR_CONFIG, "C:\\Users\\prima\\Desktop\\state-dir");
+		streamsConfiguration.put(StreamsConfig.STATE_DIR_CONFIG, ".\\state-dir");
 
 		return streamsConfiguration;
 	}
